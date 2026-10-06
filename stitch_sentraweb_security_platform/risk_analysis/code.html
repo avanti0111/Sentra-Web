@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error-container":"#93000a","surface-container":"#191f2f","on-secondary":"#002e6a","error":"#ffb4ab","surface-tint":"#4cd7f6","on-secondary-container":"#e6ecff","surface-variant":"#2f3445","tertiary-container":"#1bbd85","tertiary-fixed-dim":"#4edea3","secondary-fixed-dim":"#adc6ff","primary-container":"#06b6d4","on-tertiary-fixed":"#002113","on-error-container":"#ffdad6","on-primary-fixed-variant":"#004e5c","inverse-primary":"#00687a","on-secondary-fixed-variant":"#004395","on-tertiary-fixed-variant":"#005236","surface":"#0d1322","primary-fixed-dim":"#4cd7f6","surface-container-lowest":"#080e1d","outline-variant":"#3d494c","on-primary-fixed":"#001f26","on-surface-variant":"#bcc9cd","on-primary":"#003640","outline":"#869397","primary-fixed":"#acedff","on-primary-container":"#00424f","tertiary-fixed":"#6ffbbe","on-tertiary-container":"#00452e","primary":"#4cd7f6","surface-dim":"#0d1322","surface-bright":"#33394a","tertiary":"#4edea3","surface-container-low":"#151b2b","on-background":"#dde2f8","inverse-surface":"#dde2f8","surface-container-highest":"#2f3445","secondary-fixed":"#d8e2ff","secondary-container":"#0566d9","on-error":"#690005","surface-container-high":"#242a3a","on-secondary-fixed":"#001a42","inverse-on-surface":"#2a3040","on-surface":"#dde2f8","background":"#0d1322","on-tertiary":"#003824","secondary":"#adc6ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-desktop":"1.5rem","space-xs":"0.25rem","gutter-md":"1rem","margin-tablet":"1.25rem","space-2xs":"0.125rem","gutter":"0.75rem","space-md":"0.75rem","gutter-lg":"1.25rem","space-xl":"1.5rem","margin":"1rem","space-2xl":"2rem","space-sm":"0.5rem","space-lg":"1rem"},"fontFamily":{"body-default":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"telemetry-data":["JetBrains Mono"],"display-lg":["Inter"],"telemetry-inline":["JetBrains Mono"],"badge-label":["JetBrains Mono"],"headline-sm":["Inter"],"display-lg-mobile":["Inter"],"body-strong":["Inter"]},"fontSize":{"body-default":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"telemetry-data":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"telemetry-inline":["11px",{"lineHeight":"14px","fontWeight":"400"}],"badge-label":["10px",{"lineHeight":"12px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-strong":["14px",{"lineHeight":"20px","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-default text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.45)]"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center gap-space-sm bg-surface-container-lowest/60"><img alt="SentraWeb Shield Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WzcdPRuMVHb_N3VcEqpOGiFm22GtxWqFa4Ivt0TWEW-dk0XJhz3foAxpTY94l2UbJZj4AJ5zyCxW6jZM93Y0abK5XNoVo7wdrl5SkHNaErQh1kXm98m28J8a_W9759x92bPha-T-tVqGfyi2_d704i0EzvpZLJgO_p5s0GJQhkh85oncZQ8Mf8BOORjqobYsMWfSZx75KQX7OLKpdXXrX3sKL-O464Sj-QOKMv0d5gV5VUEYeB83-ucl0"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">SentraWeb</span><span class="font-badge-label text-badge-label text-primary uppercase mt-space-2xs">SOC v2.4 Enterprise</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-badge-label text-badge-label uppercase text-on-surface-variant tracking-wider">Operational Modules</div><nav class="flex flex-col gap-space-2xs mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-body-strong"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="dashboard" href="#"><span class="material-symbols-outlined text-lg leading-none">speed</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="session-monitoring" href="#"><span class="material-symbols-outlined text-lg leading-none">radar</span><span>Session Monitoring</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="session-details" href="#"><span class="material-symbols-outlined text-lg leading-none">manage_search</span><span>Session Details</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="threat-detection" href="#"><span class="material-symbols-outlined text-lg leading-none">security</span><span>Threat Detection</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-body-strong" data-path="risk-analysis" href="#"><span class="material-symbols-outlined text-lg leading-none">monitoring</span><span>Risk Analysis</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="response-and-logs" href="#"><span class="material-symbols-outlined text-lg leading-none">terminal</span><span>Response &amp; Logs</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-default text-body-default" data-path="settings" href="#"><span class="material-symbols-outlined text-lg leading-none">settings</span><span>Settings</span></a></nav></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-lowest/80 flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-badge-label text-badge-label text-on-surface-variant uppercase">Engine Status</span><span class="flex items-center gap-space-xs font-telemetry-inline text-telemetry-inline text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Active v2.1</span></div><div class="font-telemetry-inline text-telemetry-inline text-on-surface-variant">Context-Aware Inspection</div><div class="pt-space-xs flex items-center justify-between font-telemetry-inline text-telemetry-inline text-outline"><span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>SQLite + Flask API</span><span class="text-tertiary">SYNCED</span></div><div class="pt-space-xs flex items-center justify-between font-telemetry-inline text-telemetry-inline text-on-surface-variant"><span>RAM: 3.4 GB / 8 GB</span><span>LAT: 12ms</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 px-gutter-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">SOC</span><span class="material-symbols-outlined text-sm">chevron_right</span><span class="text-on-surface font-body-strong text-body-strong">Command Center</span></nav><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-72 bg-surface-container-lowest text-on-surface placeholder:text-outline font-telemetry-data text-telemetry-data pl-9 pr-space-md py-1.5 rounded-lg outline-none focus:ring-1 focus:ring-primary" placeholder="Search IP, Session ID, CVE..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high"><span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span><span class="w-2 h-2 rounded-full bg-tertiary -ml-3"></span><span class="font-badge-label text-badge-label text-tertiary tracking-wide uppercase">MONITORING ACTIVE: 142 req/s</span></div><div class="flex items-center gap-space-xs"><button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors" type="button"><span class="material-symbols-outlined text-base">refresh</span><span class="hidden md:inline">Refresh</span></button><button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors" type="button"><span class="material-symbols-outlined text-base">file_download</span><span class="hidden md:inline">Export</span></button></div><div class="relative"><button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-error text-on-error font-badge-label text-badge-label flex items-center justify-center font-bold">3</span></button></div><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtWLgr7HPH_vbv4GJ3deQ_PCTWMj6bmUjUGf4rz48XEwuxBrIHLXqBsO5AJMInzD3ioxgDITSu8guBQrRz7w6yU5STFHPacWl7Tajdi1e67Oqt3E8ydnAx9clHyOVPV6TaSsF5wsQHYS5RGzuCaQPgPBPBYCChw5Si5krY7Pnq9MoXE5dVOGAihh3Fv9lXxhLZ8YXe2Vlzk09CICgTs-sKf2054xhRrl6UZkZs0-HjLGIDP3VL-IFL"/><div class="hidden lg:flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-body-strong text-body-strong text-on-surface leading-none">Sarah Chen</span><span class="font-badge-label text-badge-label px-1 py-0.2 rounded bg-surface-container-highest text-primary">Lead</span></div><span class="font-telemetry-inline text-telemetry-inline text-on-surface-variant leading-none mt-1">Cluster-US-East</span></div></div></div></header><main class="w-full pt-16 px-gutter-lg py-gutter-lg bg-surface min-h-screen"><div class="flex flex-col w-full gap-space-xl">
+<!-- System Overall Risk Gauge Header -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-xl shadow-xl">
+<div class="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-16 -bottom-16 h-72 w-72 rounded-full bg-tertiary/5 blur-2xl pointer-events-none"></div>
+<div class="relative flex flex-col lg:flex-row lg:items-center justify-between gap-space-xl">
+<!-- Left: Engine Metadata & Composite Status -->
+<div class="flex flex-col gap-space-sm max-w-2xl">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-sm py-0.5 rounded bg-surface-container-highest font-badge-label text-badge-label text-primary uppercase tracking-wider">
+            Real-Time Inference Engine
+          </span>
+<span class="flex items-center gap-1 font-telemetry-inline text-telemetry-inline text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+            Epoch 14,892.42 · Latency 4.2ms
+          </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-telemetry-inline text-telemetry-inline text-outline">
+            ISO/IEC 27001 SOC v2.4
+          </span>
+</div>
+<div>
+<div class="flex items-baseline gap-space-md">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+              Platform Dynamic Risk Index
+            </h1>
+<span class="px-space-sm py-1 rounded bg-tertiary-container/20 text-tertiary font-badge-label text-badge-label uppercase">
+              Low to Moderate Threat Level
+            </span>
+</div>
+<p class="font-body-default text-body-default text-on-surface-variant mt-1">
+            Dynamic context-aware threat scoring evaluating continuous ingress telemetry through distributed Markov behavioral models and contextual telemetry feeds.
+          </p>
+</div>
+<!-- Ingress Telemetry Chips -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col">
+<span class="font-badge-label text-badge-label text-outline uppercase">Ingress Evaluated</span>
+<span class="font-telemetry-data text-telemetry-data text-on-surface font-bold">1,842,910 req</span>
+<span class="font-telemetry-inline text-telemetry-inline text-tertiary mt-0.5">+14.2% vs baseline</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col">
+<span class="font-badge-label text-badge-label text-outline uppercase">Active Sessions</span>
+<span class="font-telemetry-data text-telemetry-data text-on-surface font-bold">18,492 live</span>
+<span class="font-telemetry-inline text-telemetry-inline text-primary mt-0.5">99.1% verified</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col">
+<span class="font-badge-label text-badge-label text-outline uppercase">Mitigated Bursts</span>
+<span class="font-telemetry-data text-telemetry-data text-on-surface font-bold">418 anomalies</span>
+<span class="font-telemetry-inline text-telemetry-inline text-on-surface-variant mt-0.5">Automated drop</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col">
+<span class="font-badge-label text-badge-label text-outline uppercase">False Positive Rate</span>
+<span class="font-telemetry-data text-telemetry-data text-on-surface font-bold">0.0031%</span>
+<span class="font-telemetry-inline text-telemetry-inline text-tertiary mt-0.5">-0.0004% Δ</span>
+</div>
+</div>
+</div>
+<!-- Right: Gauge Visual and Scoring Formulation breakdown -->
+<div class="flex flex-col sm:flex-row items-center gap-space-lg p-space-md rounded-xl bg-surface-container-lowest/90 backdrop-blur-md shadow-md min-w-[320px] lg:min-w-[420px]">
+<!-- Donut / Semi Gauge Chart -->
+<div class="relative flex items-center justify-center w-36 h-36 shrink-0">
+<svg aria-label="Risk Composite Score Dial" class="w-full h-full -rotate-90" role="img" viewbox="0 0 120 120">
+<circle class="text-surface-container-highest" cx="60" cy="60" fill="none" opacity="0.6" r="48" stroke="currentColor" stroke-width="9"></circle>
+<circle class="text-tertiary" cx="60" cy="60" fill="none" r="48" stroke="currentColor" stroke-dasharray="301.59" stroke-dashoffset="226.79" stroke-linecap="round" stroke-width="9"></circle>
+<circle class="text-primary" cx="60" cy="60" fill="none" opacity="0.4" r="48" stroke="currentColor" stroke-dasharray="301.59" stroke-dashoffset="260" stroke-linecap="round" stroke-width="9"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-badge-label text-badge-label text-outline uppercase">Score</span>
+<span class="font-display-lg text-display-lg text-on-surface font-bold leading-none">24.8</span>
+<span class="font-telemetry-inline text-telemetry-inline text-on-surface-variant">/ 100</span>
+</div>
+</div>
+<!-- Weighting Allocation Vector -->
+<div class="flex flex-col w-full gap-space-xs">
+<div class="flex justify-between items-center text-on-surface-variant font-badge-label text-badge-label uppercase mb-1">
+<span>Model Vector Weights</span>
+<span class="text-primary font-telemetry-inline text-telemetry-inline">ΣW = 1.00</span>
+</div>
+<div>
+<div class="flex justify-between font-telemetry-inline text-telemetry-inline text-on-surface mb-0.5">
+<span>Request Payload (W₁)</span>
+<span class="font-bold text-primary">35%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary" style="width: 35%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-telemetry-inline text-telemetry-inline text-on-surface mb-0.5">
+<span>Behavioral Deviations (W₂)</span>
+<span class="font-bold text-secondary">30%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary" style="width: 30%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-telemetry-inline text-telemetry-inline text-on-surface mb-0.5">
+<span>Contextual Signals (W₃)</span>
+<span class="font-bold text-tertiary">25%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-tertiary" style="width: 25%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-telemetry-inline text-telemetry-inline text-on-surface mb-0.5">
+<span>Historical Trust (W₄)</span>
+<span class="font-bold text-outline">10%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-outline" style="width: 10%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Three-Pillar Risk Engine Breakdown -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">hub</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Three-Pillar Continuous Inspection Matrix</h2>
+</div>
+<div class="flex items-center gap-space-xs font-telemetry-inline text-telemetry-inline text-on-surface-variant">
+<span>Inference Mode: <strong>Async Parallel Pipelining</strong></span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-lg">
+<!-- Card 1: Request-Level Risk -->
+<div class="relative flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-md hover:bg-surface-container transition-colors">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">code</span>
+</div>
+<div class="flex flex-col">
+<span class="font-badge-label text-badge-label text-outline uppercase tracking-wider">Pillar I</span>
+<span class="font-body-strong text-body-strong text-on-surface">Request-Level Risk</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-telemetry-data text-telemetry-data font-bold text-tertiary">18.2</span>
+<span class="font-telemetry-inline text-telemetry-inline text-outline">/100</span>
+<span class="block font-badge-label text-badge-label text-tertiary uppercase">Low Vector</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Deterministic pattern validation, cryptographic header consistency, and thermodynamic payload entropy metrics.
+          </p>
+<!-- Technical Sub-Modules -->
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+<div class="flex items-center justify-between font-telemetry-data text-telemetry-data text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  WAF Pattern Matrix
+                </span>
+<span class="font-badge-label text-badge-label text-tertiary">0.04 DETECT</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Regex AST evaluation for SQLi, XSS, RCE, SSRF, &amp; JNDI syntax trees.
+              </span>
+<div class="flex gap-1 mt-1 font-telemetry-inline text-telemetry-inline text-outline flex-wrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-container">OWASP Top 10</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container">Coraza WASM</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+<div class="flex items-center justify-between font-telemetry-data text-telemetry-data text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  HTTP Sanitization &amp; Header Audit
+                </span>
+<span class="font-badge-label text-badge-label text-secondary">PASS 99.8%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Evaluates missing Accept-Encoding, HTTP/2 pseudo-header disorder, &amp; cipher suite downgrades.
+              </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+<div class="flex items-center justify-between font-telemetry-data text-telemetry-data text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Payload Shannon Entropy
+                </span>
+<span class="font-badge-label text-badge-label text-primary">H = 4.21 bit</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Detects obfuscated binaries, base64 webshell injections, and polyglot wrappers via byte dispersal.
+              </span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-telemetry-inline text-telemetry-inline text-outline">
+<span>Inspection Engine: RE2 / Hyperscan</span>
+<span class="text-tertiary">STABLE 0.8ms</span>
+</div>
+</div>
+<!-- Card 2: Behaviour-Based Risk -->
+<div class="relative flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-md hover:bg-surface-container transition-colors">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">route</span>
+</div>
+<div class="flex flex-col">
+<span class="font-badge-label text-badge-label text-outline uppercase tracking-wider">Pillar II</span>
+<span class="font-body-strong text-body-strong text-on-surface">Behaviour-Based Risk</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-telemetry-data text-telemetry-data font-bold text-secondary">34.5</span>
+<span class="font-telemetry-inline text-telemetry-inline text-outline">/100</span>
+<span class="block font-badge-label text-badge-label text-secondary uppercase">Elevated Fluctuations</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            First-order Markov navigation transitions, inter-request arrival cadence, and synthetic concurrency flags.
+          </p>
+<!-- Technical Sub-Modules -->
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+<div class="flex items-center justify-between font-telemetry-data text-telemetry-data text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Markov Transition State Model
+                </span>
+<span class="font-badge-label text-badge-label text-secondary">Pr(s'|s) &lt; 0.002</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Identifies checkout &amp; auth pipeline skips (e.g., immediate POST /api/v1/charge without token generation).
+              </span>
+<div class="flex gap-1 mt-1 font-telemetry-inline text-telemetry-inline text-outline flex-wrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-container">State Traversal</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container">Funnel Integrity</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+<div class="flex items-center justify-between font-telemetry-data text-telemetry-data text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Velocity &amp; Burst Poisson Decay
+                </span>
+<span class="font-badge-label text-badge-label text-tertiary">λ = 1.48 req/s</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Leaky bucket inter-arrival variance distinguishing scripted scraper pulses from human interactions.
+              </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+<div class="flex items-center justify-between font-telemetry-data text-telemetry-data text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Rapid Multi-Tab Probing
+                </span>
+<span class="font-badge-label text-badge-label text-error font-bold">14 SESSIONS</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Concurrent HTTP pipelining probing endpoints with uniform cookies across asymmetric TCP streams.
+              </span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-telemetry-inline text-telemetry-inline text-outline">
+<span>Classifier: Distributed Markov HMM</span>
+<span class="text-secondary">ACTIVE</span>
+</div>
+</div>
+<!-- Card 3: Context-Based Risk -->
+<div class="relative flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-md hover:bg-surface-container transition-colors">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">travel_explore</span>
+</div>
+<div class="flex flex-col">
+<span class="font-badge-label text-badge-label text-outline uppercase tracking-wider">Pillar III</span>
+<span class="font-body-strong text-body-strong text-on-surface">Context-Based Risk</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-telemetry-data text-telemetry-data font-bold text-tertiary">21.0</span>
+<span class="font-telemetry-inline text-telemetry-inline text-outline">/100</span>
+<span class="block font-badge-label text-badge-label text-tertiary uppercase">Normal Environs</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cross-referenced IP reputation lists, canvas/WebGL fingerprint uniqueness, and spatio-temporal impossible travel.
+          </p>
+<!-- Technical Sub-Modules -->
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+<div class="flex items-center justify-between font-telemetry-data text-telemetry-data text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  IP Reputation &amp; Autonomous System
+                </span>
+<span class="font-badge-label text-badge-label text-tertiary">Spamhaus Clean</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                BGP route analysis, Tor Exit node identification, Datacenter (AWS/Hetzner) vs Residential ISP ASN mapping.
+              </span>
+<div class="flex gap-1 mt-1 font-telemetry-inline text-telemetry-inline text-outline flex-wrap">
+<span class="px-1.5 py-0.5 rounded bg-surface-container">MaxMind GeoIP2</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container">IPQS Feeds</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+<div class="flex items-center justify-between font-telemetry-data text-telemetry-data text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Hardware &amp; Canvas Fingerprint
+                </span>
+<span class="font-badge-label text-badge-label text-secondary">FP MATCH 97.4%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                WebGL unmasked renderer (NVIDIA vs SwiftShader Emulation) mismatch against claimed Navigator User-Agent.
+              </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 flex flex-col gap-1">
+<div class="flex items-center justify-between font-telemetry-data text-telemetry-data text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Impossible Travel Velocity
+                </span>
+<span class="font-badge-label text-badge-label text-error font-bold">1 FLAG INTERCEPT</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Session migration between geo-coordinates requiring supersonic speed (&gt;900 km/h threshold).
+              </span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-telemetry-inline text-telemetry-inline text-outline">
+<span>Spatial Feed: GeoCalculus Spherical Arc</span>
+<span class="text-tertiary">SYNCED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 24-Hour Risk Trend Chart & Incident Annotations -->
+<section class="flex flex-col gap-space-sm rounded-xl bg-surface-container-low p-space-lg shadow-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">insights</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">24-Hour Composite Risk &amp; Volume Correlation</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Dual-axis plotting: Composite Risk Index (0-100) vs Hourly Flagged Anomaly Ingress.
+        </span>
+</div>
+<div class="flex items-center gap-space-md flex-wrap font-telemetry-inline text-telemetry-inline">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-primary"></span>
+<span class="text-on-surface">Composite Risk Score</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-secondary"></span>
+<span class="text-on-surface-variant">Flagged Ingress (K req/hr)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="text-error">Threat Anomaly Tripped</span>
+</div>
+</div>
+</div>
+<!-- Dual Axis SVG Chart -->
+<div class="relative w-full h-80 mt-space-md bg-surface-container-lowest/60 rounded-xl p-space-md flex flex-col justify-between overflow-hidden">
+<!-- Gridlines & Background Axis -->
+<div class="absolute inset-x-space-md inset-y-space-md flex flex-col justify-between pointer-events-none opacity-20">
+<div class="w-full border-b border-outline"></div>
+<div class="w-full border-b border-outline"></div>
+<div class="w-full border-b border-outline"></div>
+<div class="w-full border-b border-outline"></div>
+<div class="w-full border-b border-outline"></div>
+</div>
+<!-- Incident Annotation Markers (Overlay absolute) -->
+<div class="absolute left-[24%] top-6 z-20 flex flex-col items-center group cursor-pointer">
+<div class="px-space-sm py-1 rounded bg-error/90 text-on-error font-telemetry-inline text-telemetry-inline shadow-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">warning</span>
+<span>04:15 UTC · Distributed Credential Spraying (74.2 Score)</span>
+</div>
+<div class="w-0.5 h-44 bg-error/70"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></div>
+</div>
+<div class="absolute left-[62%] top-20 z-20 flex flex-col items-center group cursor-pointer">
+<div class="px-space-sm py-1 rounded bg-secondary-container text-on-secondary-container font-telemetry-inline text-telemetry-inline shadow-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">shield</span>
+<span>14:30 UTC · ASN Route Hijack Heuristic (49.8 Score)</span>
+</div>
+<div class="w-0.5 h-32 bg-secondary/60"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<!-- Interactive SVG Chart Graphic -->
+<svg class="w-full h-full relative z-10" preserveaspectratio="none" viewbox="0 0 1000 240">
+<defs>
+<lineargradient id="riskGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="volGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#adc6ff" stop-opacity="0.15"></stop>
+<stop offset="100%" stop-color="#adc6ff" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Volume Area (Secondary) -->
+<path d="M 0,210 L 40,205 L 90,200 L 140,195 L 190,190 L 240,70 L 290,120 L 340,180 L 400,185 L 450,190 L 520,180 L 620,110 L 680,160 L 740,190 L 800,195 L 860,190 L 920,185 L 1000,180 L 1000,240 L 0,240 Z" fill="url(#volGradient)"></path>
+<path d="M 0,210 L 40,205 L 90,200 L 140,195 L 190,190 L 240,70 L 290,120 L 340,180 L 400,185 L 450,190 L 520,180 L 620,110 L 680,160 L 740,190 L 800,195 L 860,190 L 920,185 L 1000,180" fill="none" opacity="0.6" stroke="#adc6ff" stroke-dasharray="3,3" stroke-width="1.5"></path>
+<!-- Composite Risk Score Line + Gradient Area -->
+<path d="M 0,190 Q 120,185 200,170 T 240,42 T 280,110 T 360,180 T 500,175 T 620,95 T 700,160 T 850,175 T 1000,165 L 1000,240 L 0,240 Z" fill="url(#riskGradient)"></path>
+<path d="M 0,190 Q 120,185 200,170 T 240,42 T 280,110 T 360,180 T 500,175 T 620,95 T 700,160 T 850,175 T 1000,165" fill="none" stroke="#4cd7f6" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Anomaly Peak Point -->
+<circle cx="240" cy="42" fill="#ffb4ab" r="5" stroke="#93000a" stroke-width="2"></circle>
+<circle cx="620" cy="95" fill="#adc6ff" r="4" stroke="#0566d9" stroke-width="2"></circle>
+</svg>
+<!-- Time Axis Labels -->
+<div class="flex justify-between items-center font-telemetry-inline text-telemetry-inline text-outline pt-2 px-1">
+<span>00:00 UTC</span>
+<span>03:00 UTC</span>
+<span class="text-error font-bold">06:00 UTC (Spray Window)</span>
+<span>09:00 UTC</span>
+<span>12:00 UTC</span>
+<span class="text-secondary font-bold">15:00 UTC (ASN Shift)</span>
+<span>18:00 UTC</span>
+<span>21:00 UTC</span>
+<span>24:00 UTC</span>
+</div>
+</div>
+</section>
+<!-- Explainable Risk Factors Matrix Table -->
+<section class="flex flex-col gap-space-sm rounded-xl bg-surface-container-low p-space-lg shadow-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">calculate</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Explainable Risk Factors Formulation Matrix</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Model formula: <code class="font-telemetry-inline text-telemetry-inline text-primary">Composite Score = Σ (Wᵢ · PillarScoreᵢ) + BaselineOffset - HistoricalCredit</code>
+</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded bg-surface-container font-telemetry-inline text-telemetry-inline text-on-surface-variant">
+          SOC Evaluation Mode: Educational / Academic View
+        </span>
+</div>
+</div>
+<!-- Forensic Table -->
+<div class="overflow-x-auto w-full mt-space-xs rounded-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-badge-label text-badge-label uppercase tracking-wider">
+<th class="py-2.5 px-space-md">Signal Key / Factor</th>
+<th class="py-2.5 px-space-md">Observed Telemetry Metric</th>
+<th class="py-2.5 px-space-md">Engine Calculation Rule</th>
+<th class="py-2.5 px-space-md">Dynamic Delta</th>
+<th class="py-2.5 px-space-md">Weighted Impact</th>
+<th class="py-2.5 px-space-md text-right">Target Session</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-default text-body-default text-on-surface">
+<!-- Row 1: SQLi Detection -->
+<tr class="hover:bg-primary-container/10 transition-colors">
+<td class="py-2.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-base">warning</span>
+<span class="font-body-strong text-body-strong">SQL Injection Payload</span>
+</div>
+<span class="font-telemetry-inline text-telemetry-inline text-outline">REQ_PAYLOAD_AST_01</span>
+</td>
+<td class="py-2.5 px-space-md font-telemetry-data text-telemetry-data">
+<code>UNION SELECT 1, @@version--</code> in query param
+            </td>
+<td class="py-2.5 px-space-md font-telemetry-inline text-telemetry-inline text-on-surface-variant">
+              Tainted Abstract Syntax Tree match: score += 85.0
+            </td>
+<td class="py-2.5 px-space-md">
+<span class="font-telemetry-data text-telemetry-data font-bold text-error">+85.0 pt</span>
+</td>
+<td class="py-2.5 px-space-md font-telemetry-data text-telemetry-data text-on-surface">
+              +29.75 (35% weight)
+            </td>
+<td class="py-2.5 px-space-md text-right font-telemetry-inline text-telemetry-inline text-outline">
+              sess_9041a8fd
+            </td>
+</tr>
+<!-- Row 2: Impossible Travel -->
+<tr class="hover:bg-primary-container/10 transition-colors bg-surface-container-low/40">
+<td class="py-2.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-base">flight_takeoff</span>
+<span class="font-body-strong text-body-strong">Impossible Travel Velocity</span>
+</div>
+<span class="font-telemetry-inline text-telemetry-inline text-outline">GEO_SPHERICAL_ARC_04</span>
+</td>
+<td class="py-2.5 px-space-md font-telemetry-data text-telemetry-data">
+              London (GB) → Singapore (SG) in 12 min (Δ: 10,841 km)
+            </td>
+<td class="py-2.5 px-space-md font-telemetry-inline text-telemetry-inline text-on-surface-variant">
+              Spherical haversine speed = 54,205 km/h (&gt;900 km/h cap)
+            </td>
+<td class="py-2.5 px-space-md">
+<span class="font-telemetry-data text-telemetry-data font-bold text-error">+92.0 pt</span>
+</td>
+<td class="py-2.5 px-space-md font-telemetry-data text-telemetry-data text-on-surface">
+              +23.00 (25% weight)
+            </td>
+<td class="py-2.5 px-space-md text-right font-telemetry-inline text-telemetry-inline text-outline">
+              sess_b304c102
+            </td>
+</tr>
+<!-- Row 3: Markov Funnel Deviation -->
+<tr class="hover:bg-primary-container/10 transition-colors">
+<td class="py-2.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">alt_route</span>
+<span class="font-body-strong text-body-strong">Markov Funnel Skip</span>
+</div>
+<span class="font-telemetry-inline text-telemetry-inline text-outline">BEH_MARKOV_STATE_02</span>
+</td>
+<td class="py-2.5 px-space-md font-telemetry-data text-telemetry-data">
+              Direct POST /api/v2/settle without GET /checkout
+            </td>
+<td class="py-2.5 px-space-md font-telemetry-inline text-telemetry-inline text-on-surface-variant">
+              Transition probability Pr = 0.0004 &lt; ε threshold
+            </td>
+<td class="py-2.5 px-space-md">
+<span class="font-telemetry-data text-telemetry-data font-bold text-secondary">+45.0 pt</span>
+</td>
+<td class="py-2.5 px-space-md font-telemetry-data text-telemetry-data text-on-surface">
+              +13.50 (30% weight)
+            </td>
+<td class="py-2.5 px-space-md text-right font-telemetry-inline text-telemetry-inline text-outline">
+              sess_4ef80231
+            </td>
+</tr>
+<!-- Row 4: Cipher Suite Downgrade -->
+<tr class="hover:bg-primary-container/10 transition-colors bg-surface-container-low/40">
+<td class="py-2.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base">lock_clock</span>
+<span class="font-body-strong text-body-strong">Cipher Anomaly</span>
+</div>
+<span class="font-telemetry-inline text-telemetry-inline text-outline">REQ_TLS_JA4_09</span>
+</td>
+<td class="py-2.5 px-space-md font-telemetry-data text-telemetry-data">
+              TLS 1.1 handshake offered alongside Chrome 124 UA
+            </td>
+<td class="py-2.5 px-space-md font-telemetry-inline text-telemetry-inline text-on-surface-variant">
+              JA4 fingerprint mismatch with declared client stack
+            </td>
+<td class="py-2.5 px-space-md">
+<span class="font-telemetry-data text-telemetry-data font-bold text-secondary">+30.0 pt</span>
+</td>
+<td class="py-2.5 px-space-md font-telemetry-data text-telemetry-data text-on-surface">
+              +10.50 (35% weight)
+            </td>
+<td class="py-2.5 px-space-md text-right font-telemetry-inline text-telemetry-inline text-outline">
+              sess_1120aa44
+            </td>
+</tr>
+<!-- Row 5: Historical Trust Discount -->
+<tr class="hover:bg-primary-container/10 transition-colors">
+<td class="py-2.5 px-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">verified</span>
+<span class="font-body-strong text-body-strong">Longitudinal Trust Credit</span>
+</div>
+<span class="font-telemetry-inline text-telemetry-inline text-outline">TRUST_HISTORICAL_01</span>
+</td>
+<td class="py-2.5 px-space-md font-telemetry-data text-telemetry-data">
+              Corporate SSO SAML token active for 180+ days
+            </td>
+<td class="py-2.5 px-space-md font-telemetry-inline text-telemetry-inline text-on-surface-variant">
+              Verified resident device cookie &amp; zero historic incidents
+            </td>
+<td class="py-2.5 px-space-md">
+<span class="font-telemetry-data text-telemetry-data font-bold text-tertiary">-50.0 pt</span>
+</td>
+<td class="py-2.5 px-space-md font-telemetry-data text-telemetry-data text-tertiary">
+              -5.00 (10% weight)
+            </td>
+<td class="py-2.5 px-space-md text-right font-telemetry-inline text-telemetry-inline text-outline">
+              sess_chen_lead
+            </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Forensic Model Footnote -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest/50 mt-space-xs text-outline font-telemetry-inline text-telemetry-inline">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">school</span>
+<span>Project Architecture Evaluation: Normalized score bounded [0.0 - 100.0]. Action triggers: &gt;50 Step-up MFA, &gt;75 Captcha, &gt;85 Terminate Session.</span>
+</div>
+<div class="flex items-center gap-2 text-primary">
+<span>Model Version: 2.4.18b (Inference Time: 3.4ms)</span>
+</div>
+</div>
+</section>
+</div></main></div></body></html>
